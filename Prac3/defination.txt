@@ -1,0 +1,11 @@
+Setup single node Hadoop cluster and apply HDFS commands on single node Hadoop Cluster.   http://www.pingax.com
+1.    Version
+2.    Put some text file on Hadoop
+3.    Get back the text file from Hadoop to Local machine
+4.    List all the file and directories.
+5.    Make a new directory under Hadoop File systems
+6.    Change the mode and access rights on the file as well as directory
+7.    Remove a file form HDFS
+8.    Remove a directory from HDFS
+9.    Change file location in HDFS
+10.   Open a text file directly from HDFS

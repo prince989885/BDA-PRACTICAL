@@ -1,0 +1,12 @@
+>>CREATE KEYSPACE PRAC9 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
+>>CREATE KEYSPACE PRAC8 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
+Strategy: There are two types of strategy declaration in Cassandra syntax:
+Simple Strategy: Simple strategy is used in the case of one data center. In this strategy, the first replica is placed on the selected node and the remaining nodes are placed in clockwise direction in the ring without considering rack or node location.
+
+Network Topology Strategy: This strategy is used in the case of more than one data centers. In this strategy, you have to provide replication factor for each data center separately.
+
+Replication Factor: Replication factor is the number of replicas of data placed on different nodes. More than two replication factor are good to attain no single point of failure. So, 3 is good replication factor.
+
+>>DESCRIBE KEYSPACES;
+>>ALTER KEYSPACE PRAC8 WITH replication = {'class':'NetworkTopologyStrategy', 'replication_factor' : 1};   
+>>DROP  KEYSPACE PRAC8 ;  
